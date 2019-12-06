@@ -1,4 +1,4 @@
-package org.liws.zk.clients.base.comm_impl.watcher;
+package org.liws.zk.clients.base;
 
 import java.util.concurrent.CountDownLatch;
 

@@ -7,7 +7,7 @@ import org.apache.zookeeper.data.Stat;
 /**
  * 检测节点是否存在，使用异步(async)接口。
  */
-public class T6_Exist_ASync {
+public class T6_exist_ASync {
 
 	private static ZooKeeper zk;
 

@@ -6,13 +6,13 @@ import org.apache.zookeeper.Watcher.Event.EventType;
 import org.apache.zookeeper.Watcher.Event.KeeperState;
 import org.apache.zookeeper.ZooDefs.Ids;
 import org.liws.zk.clients.ZkProps;
-import org.liws.zk.clients.base.comm_impl.watcher.AbsWatcher;
+import org.liws.zk.clients.base.AbsWatcher;
 import org.apache.zookeeper.ZooKeeper;
 
 /**
  * 检测节点是否存在，使用同步(sync)接口。
  */
-public class T6_Exist_Sync {
+public class T6_exist_Sync {
 
 	private static ZooKeeper zk;
 

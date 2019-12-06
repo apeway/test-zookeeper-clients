@@ -9,6 +9,9 @@ import org.jboss.netty.util.internal.StringUtil;
 import org.junit.Test;
 import org.liws.zk.clients.ZkProps;
 
+/**
+ *  setACL ... 
+ */
 public class T7_Auth {
 
 	private ZooKeeper getZookeeper() throws Exception {

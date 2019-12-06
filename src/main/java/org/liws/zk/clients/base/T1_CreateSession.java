@@ -6,7 +6,6 @@ import org.apache.zookeeper.Watcher.Event.EventType;
 import org.apache.zookeeper.Watcher.Event.KeeperState;
 import org.junit.Test;
 import org.liws.zk.clients.ZkProps;
-import org.liws.zk.clients.base.comm_impl.watcher.AbsWatcher;
 
 public class T1_CreateSession {
 
