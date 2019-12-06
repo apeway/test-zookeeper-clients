@@ -1,4 +1,4 @@
-package org.liws.zk.clients.javaclient.t03_delete;
+package org.liws.zk.clients.base.sync;
 import java.util.concurrent.CountDownLatch;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.WatchedEvent;
@@ -11,7 +11,7 @@ import org.apache.zookeeper.ZooKeeper;
 /**
  * ZooKeeper API 删除节点，使用同步(sync)接口。
  */
-public class Delete_API_Sync_Usage {
+public class T3_Delete_Sync {
 
     public static void main(String[] args) throws Exception {
     	CountDownLatch connectedSemaphore = new CountDownLatch(1);

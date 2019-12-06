@@ -1,4 +1,4 @@
-package org.liws.zk.clients.javaclient.t06_exist;
+package org.liws.zk.clients.base.sync;
 
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.WatchedEvent;
@@ -6,13 +6,13 @@ import org.apache.zookeeper.Watcher.Event.EventType;
 import org.apache.zookeeper.Watcher.Event.KeeperState;
 import org.apache.zookeeper.ZooDefs.Ids;
 import org.liws.zk.clients.ZkProps;
-import org.liws.zk.clients.javaclient.impl.watcher.AbsWatcherWithCDL;
+import org.liws.zk.clients.base.impl.watcher.AbsWatcherWithCDL;
 import org.apache.zookeeper.ZooKeeper;
 
 /**
  * 检测节点是否存在，使用同步(sync)接口。
  */
-public class Exist_API_Sync_Usage {
+public class T6_Exist_Sync {
 
 	private static ZooKeeper zk;
 

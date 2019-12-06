@@ -1,4 +1,4 @@
-package org.liws.zk.clients.javaclient.impl.callback;
+package org.liws.zk.clients.base.impl.callback;
 
 import org.apache.zookeeper.AsyncCallback;
 import org.apache.zookeeper.data.Stat;

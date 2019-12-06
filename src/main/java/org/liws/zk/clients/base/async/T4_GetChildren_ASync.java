@@ -1,4 +1,4 @@
-package org.liws.zk.clients.javaclient.t04_get.getChildren;
+package org.liws.zk.clients.base.async;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -8,13 +8,13 @@ import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.Watcher.Event.EventType;
 import org.apache.zookeeper.ZooDefs.Ids;
 import org.liws.zk.clients.ZkProps;
-import org.liws.zk.clients.javaclient.impl.callback.SimpChildren2Callback;
+import org.liws.zk.clients.base.impl.callback.SimpChildren2Callback;
 import org.apache.zookeeper.ZooKeeper;
 
 /**
  * ZooKeeper API 获取子节点列表，使用异步(ASync)接口。
  */
-public class GetChildren_API_ASync_Usage {
+public class T4_GetChildren_ASync {
 
 	private static ZooKeeper zk = null;
 

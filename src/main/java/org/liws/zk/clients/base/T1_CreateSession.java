@@ -1,13 +1,13 @@
-package org.liws.zk.clients.javaclient.t01_constructor;
+package org.liws.zk.clients.base;
 
 import org.apache.zookeeper.ZooKeeper;
 import org.junit.Test;
 import org.liws.zk.clients.ZkProps;
-import org.liws.zk.clients.javaclient.impl.watcher.AbsWatcherWithCDL;
-import org.liws.zk.clients.javaclient.impl.watcher.SimpWatcher1;
+import org.liws.zk.clients.base.impl.watcher.AbsWatcherWithCDL;
+import org.liws.zk.clients.base.impl.watcher.SimpWatcher1;
 
 
-public class T_CreateSession {
+public class T1_CreateSession {
 
 	/**
 	 * 创建一个最基本的ZooKeeper会话实例

@@ -1,4 +1,4 @@
-package org.liws.zk.clients.javaclient.t02_create;
+package org.liws.zk.clients.base.sync;
 import java.util.concurrent.CountDownLatch;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.WatchedEvent;
@@ -11,7 +11,7 @@ import org.apache.zookeeper.ZooKeeper;
 /**
  * ZooKeeper API创建节点，使用同步(sync)接口。
  */
-public class ZooKeeper_Create_API_Sync_Usage {
+public class T2_Create_Sync {
 
     public static void main(String[] args) throws Exception{
     	CountDownLatch connectedSemaphore = new CountDownLatch(1);

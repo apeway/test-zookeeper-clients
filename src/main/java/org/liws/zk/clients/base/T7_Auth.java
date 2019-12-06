@@ -1,4 +1,4 @@
-package org.liws.zk.clients.javaclient.t07_auth;
+package org.liws.zk.clients.base;
 
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.KeeperException;
@@ -9,7 +9,7 @@ import org.jboss.netty.util.internal.StringUtil;
 import org.junit.Test;
 import org.liws.zk.clients.ZkProps;
 
-public class T1_Auth {
+public class T7_Auth {
 
 	private ZooKeeper getZookeeper() throws Exception {
 		return getZookeeper(null);

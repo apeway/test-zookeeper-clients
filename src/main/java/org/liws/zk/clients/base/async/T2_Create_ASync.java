@@ -1,4 +1,4 @@
-package org.liws.zk.clients.javaclient.t02_create;
+package org.liws.zk.clients.base.async;
 
 import java.util.concurrent.CountDownLatch;
 import org.apache.zookeeper.AsyncCallback;
@@ -13,7 +13,7 @@ import org.apache.zookeeper.ZooKeeper;
 /**
  * ZooKeeper API创建节点，使用异步(async)接口。
  */
-public class ZooKeeper_Create_API_ASync_Usage {
+public class T2_Create_ASync {
 
 	public static void main(String[] args) throws Exception {
 		CountDownLatch connectedSemaphore = new CountDownLatch(1);

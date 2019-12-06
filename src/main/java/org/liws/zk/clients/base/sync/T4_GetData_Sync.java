@@ -1,4 +1,4 @@
-package org.liws.zk.clients.javaclient.t04_get.getData;
+package org.liws.zk.clients.base.sync;
 
 import java.util.concurrent.CountDownLatch;
 import org.apache.zookeeper.CreateMode;
@@ -7,25 +7,26 @@ import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.Watcher.Event.EventType;
 import org.apache.zookeeper.Watcher.Event.KeeperState;
 import org.apache.zookeeper.ZooDefs.Ids;
-import org.liws.zk.clients.javaclient.impl.callback.SimpDataCallback;
 import org.apache.zookeeper.ZooKeeper;
+import org.apache.zookeeper.data.Stat;
 
-// ZooKeeper API 获取节点数据内容，使用异步(async)接口。
-public class GetData_API_ASync_Usage implements Watcher {
+// ZooKeeper API 获取节点数据内容，使用同步(sync)接口。
+public class T4_GetData_Sync implements Watcher {
 
 	private static CountDownLatch connectedSemaphore = new CountDownLatch(1);
-	private static ZooKeeper zk;
+	private static ZooKeeper zk = null;
+	private static Stat stat = new Stat();
 
 	public static void main(String[] args) throws Exception {
 
 		String path = "/zk-book";
 		zk = new ZooKeeper("domain1.book.zookeeper:2181", 5000, //
-				new GetData_API_ASync_Usage());
+				new T4_GetData_Sync());
 		connectedSemaphore.await();
-
 		zk.create(path, "123".getBytes(), Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
 
-		zk.getData(path, true, new SimpDataCallback(), null);
+		System.out.println(new String(zk.getData(path, true, stat)));
+		System.out.println(stat.getCzxid() + "," + stat.getMzxid() + "," + stat.getVersion());
 
 		zk.setData(path, "123".getBytes(), -1);
 
@@ -38,12 +39,11 @@ public class GetData_API_ASync_Usage implements Watcher {
 				connectedSemaphore.countDown();
 			} else if (event.getType() == EventType.NodeDataChanged) {
 				try {
-					zk.getData(event.getPath(), true, new SimpDataCallback(), null);
+					System.out.println(new String(zk.getData(event.getPath(), true, stat)));
+					System.out.println(stat.getCzxid() + "," + stat.getMzxid() + "," + stat.getVersion());
 				} catch (Exception e) {
 				}
 			}
 		}
 	}
 }
-
-

@@ -1,4 +1,4 @@
-package org.liws.zk.clients.javaclient.t04_get.getChildren;
+package org.liws.zk.clients.base.sync;
 
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
@@ -13,7 +13,7 @@ import org.apache.zookeeper.ZooKeeper;
 /**
  * ZooKeeper API 获取子节点列表，使用同步(sync)接口。
  */
-public class GetChildren_API_Sync_Usage {
+public class T4_GetChildren_Sync {
 
 	private static ZooKeeper zk = null;
 	
