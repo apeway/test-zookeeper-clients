@@ -1,12 +1,15 @@
-package org.liws.zk.clients.base.impl.watcher;
+package org.liws.zk.clients.base.comm_impl.watcher;
 
 import java.util.concurrent.CountDownLatch;
 
 import org.apache.zookeeper.Watcher;
 
-public abstract class AbsWatcherWithCDL implements Watcher {
+/**
+ * 内部维护了一个CountDownLatch(1)
+ */
+public abstract class AbsWatcher implements Watcher {
 	
-	/** 反映会话是否连接成功的信号量	 */
+	/** 信号量：用于等待会话连接成功	*/
 	private CountDownLatch connectedSemaphore = new CountDownLatch(1);
 	
 	/**
@@ -21,7 +24,7 @@ public abstract class AbsWatcherWithCDL implements Watcher {
 	}
 	
 	/**
-	 * 如果会话连接成功，调用此方法解除在await()调用上的阻塞。
+	 * 如果会话连接成功，则调用此方法来解除其它线程在await()调用上的阻塞。
 	 */
 	protected void countDown() {
 		connectedSemaphore.countDown();

@@ -3,8 +3,8 @@ package org.liws.zk.clients.base;
 import org.apache.zookeeper.ZooKeeper;
 import org.junit.Test;
 import org.liws.zk.clients.ZkProps;
-import org.liws.zk.clients.base.impl.watcher.AbsWatcherWithCDL;
-import org.liws.zk.clients.base.impl.watcher.SimpWatcher1;
+import org.liws.zk.clients.base.comm_impl.watcher.AbsWatcher;
+import org.liws.zk.clients.base.comm_impl.watcher.SimpWatcher1;
 
 
 public class T1_CreateSession {
@@ -14,7 +14,7 @@ public class T1_CreateSession {
 	 */
 	@Test
 	public void test_createSession() throws Exception {
-		AbsWatcherWithCDL watcher = new SimpWatcher1();
+		AbsWatcher watcher = new SimpWatcher1();
 		// watcher: 这里的watcher用于监听客户端与服务端连接状态变化事件（在其它场合它还能用于监听节点事件）
 		ZooKeeper zookeeper = new ZooKeeper(ZkProps.CONNECT_STR, 5000, watcher);
 		System.out.println("Zookeeper构造方法执行完后，zookeeper.getState : " + zookeeper.getState());
@@ -30,7 +30,7 @@ public class T1_CreateSession {
 	@Test
 	public void test_createSession2() throws Exception {
 		
-		AbsWatcherWithCDL watcher = new SimpWatcher1();
+		AbsWatcher watcher = new SimpWatcher1();
 		ZooKeeper zookeeper = new ZooKeeper(ZkProps.CONNECT_STR, 5000, watcher);
 		watcher.await();
 		// 第一次会话创建成功后，记录下SessionId和SessionPasswd以用于复用

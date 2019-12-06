@@ -7,7 +7,7 @@ import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.Watcher.Event.EventType;
 import org.apache.zookeeper.Watcher.Event.KeeperState;
 import org.apache.zookeeper.ZooDefs.Ids;
-import org.liws.zk.clients.base.impl.callback.SimpDataCallback;
+import org.liws.zk.clients.base.comm_impl.callback.SimpDataCallback;
 import org.apache.zookeeper.ZooKeeper;
 
 // ZooKeeper API 获取节点数据内容，使用异步(async)接口。

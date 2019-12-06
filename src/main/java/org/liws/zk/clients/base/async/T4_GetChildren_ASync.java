@@ -8,7 +8,7 @@ import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.Watcher.Event.EventType;
 import org.apache.zookeeper.ZooDefs.Ids;
 import org.liws.zk.clients.ZkProps;
-import org.liws.zk.clients.base.impl.callback.SimpChildren2Callback;
+import org.liws.zk.clients.base.comm_impl.callback.SimpChildren2Callback;
 import org.apache.zookeeper.ZooKeeper;
 
 /**

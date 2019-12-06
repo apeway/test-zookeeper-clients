@@ -6,7 +6,7 @@ import org.apache.zookeeper.Watcher.Event.EventType;
 import org.apache.zookeeper.Watcher.Event.KeeperState;
 import org.apache.zookeeper.ZooDefs.Ids;
 import org.liws.zk.clients.ZkProps;
-import org.liws.zk.clients.base.impl.watcher.AbsWatcherWithCDL;
+import org.liws.zk.clients.base.comm_impl.watcher.AbsWatcher;
 import org.apache.zookeeper.ZooKeeper;
 
 /**
@@ -18,7 +18,7 @@ public class T6_Exist_Sync {
 
 	public static void main(String[] args) throws Exception {
 
-		AbsWatcherWithCDL watcher = new AbsWatcherWithCDL() {
+		AbsWatcher watcher = new AbsWatcher() {
 			@Override
 			public void process(WatchedEvent event) {
 				try {

@@ -1,4 +1,4 @@
-package org.liws.zk.clients.base.impl.callback;
+package org.liws.zk.clients.base.comm_impl.callback;
 
 import java.util.List;
 
