@@ -67,10 +67,8 @@ public class T4_getChildren_ASync {
 		 * --------------------------------------------------------------------------------------
 		 * @param Watcher watcher | boolean watch : 
 		 *     XXX 执行getChildren操作时，可顺带注册一个watcher
-		 * @param ChildrenCallback cb | Children2Callback cb :
-		 * 
-		 * @param Object ctx : 
-		 *   
+		 * @param ChildrenCallback cb | Children2Callback cb , Object ctx  :
+		 *     异步相关
 		 */
 		zk.getChildren(PATH, true, children2Callback, null);
 
